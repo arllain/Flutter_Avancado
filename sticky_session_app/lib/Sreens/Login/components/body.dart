@@ -30,12 +30,16 @@ class Body extends StatelessWidget {
             text: "Log In with Gmail",
             color: kButtonColor,
             textColor: Colors.white,
+            fontSize: 16,
+            fontWeight: FontWeight.w500,
             press: () => {log("Log In with Gmail")},
           ),
           CustomButton(
             text: "Log In with the token",
             color: kPurpleColor,
             textColor: Colors.white,
+            fontSize: 16,
+            fontWeight: FontWeight.w500,
             press: () {
               log("Log In with the token");
             },

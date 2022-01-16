@@ -6,13 +6,17 @@ class CustomButton extends StatelessWidget {
   final Function press;
   final Color color;
   final Color textColor;
+  final double fontSize;
+  final FontWeight fontWeight;
 
   const CustomButton({
     Key? key,
     required this.press,
     required this.text,
-    this.color = kButtonColor,
-    this.textColor = Colors.white,
+    required this.fontSize,
+    required this.fontWeight,
+    required this.color,
+    required this.textColor,
   }) : super(key: key);
 
   @override
@@ -40,7 +44,7 @@ class CustomButton extends StatelessWidget {
           primary: color,
           padding: const EdgeInsets.symmetric(horizontal: 40, vertical: 20),
           textStyle: TextStyle(
-              color: textColor, fontSize: 14, fontWeight: FontWeight.w500)),
+              color: textColor, fontSize: fontSize, fontWeight: fontWeight)),
     );
   }
 }
