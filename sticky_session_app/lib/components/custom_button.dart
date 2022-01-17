@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:sticky_session_app/constants.dart';
 
 class CustomButton extends StatelessWidget {
   final String text;
@@ -24,7 +23,8 @@ class CustomButton extends StatelessWidget {
     Size size = MediaQuery.of(context).size;
     return Container(
       margin: const EdgeInsets.symmetric(vertical: 10),
-      width: size.width * 0.8,
+      padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 5),
+      width: size.width * 0.95,
       child: ClipRRect(
         child: newElevatedButton(),
       ),

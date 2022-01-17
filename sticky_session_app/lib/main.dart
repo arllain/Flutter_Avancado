@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:sticky_session_app/Sreens/Login/login_screen.dart';
-import 'package:sticky_session_app/constants.dart';
 
 void main() {
   runApp(const MyApp());
@@ -14,8 +13,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Sticky Session',
-      theme: ThemeData(
-          primaryColor: Colors.white, scaffoldBackgroundColor: kPurpleColor),
+      theme: ThemeData(primarySwatch: Colors.red),
       home: const LoginScreen(),
     );
   }
