@@ -1,7 +1,7 @@
 import 'dart:developer';
 
 import 'package:flutter/material.dart';
-import 'package:sticky_session_app/components/SelectedColor.dart';
+import 'package:sticky_session_app/components/selected_color.dart';
 import 'package:sticky_session_app/components/background.dart';
 import 'package:sticky_session_app/components/custom_input_field.dart';
 import 'package:sticky_session_app/components/release_version.dart';
