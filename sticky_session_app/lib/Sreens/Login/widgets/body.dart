@@ -1,5 +1,3 @@
-import 'dart:developer';
-
 import 'package:flutter/material.dart';
 import 'package:sticky_session_app/widgets/background.dart';
 import 'package:sticky_session_app/Sreens/LoginToken/login_token_screen.dart';
@@ -36,7 +34,16 @@ class Body extends StatelessWidget {
               textColor: Colors.white,
               fontSize: 16,
               fontWeight: FontWeight.w500,
-              press: () => {log("Log In with Gmail")},
+              press: () {
+                // Navigator.push(
+                //   context,
+                //   MaterialPageRoute(
+                //     builder: (context) {
+                //       return const NoteCreateScreen();
+                //     },
+                //   ),
+                // );
+              },
             ),
             CustomButton(
               text: "Log In with the token",
