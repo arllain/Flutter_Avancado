@@ -2,7 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:sticky_session_app/Sreens/LoginToken/components/body.dart';
+import 'package:sticky_session_app/Sreens/LoginToken/widgets/body.dart';
 
 class LoginTokenScreen extends StatelessWidget {
   const LoginTokenScreen({Key? key}) : super(key: key);

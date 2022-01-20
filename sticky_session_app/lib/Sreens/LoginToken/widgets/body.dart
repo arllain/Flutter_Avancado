@@ -1,10 +1,10 @@
 import 'dart:developer';
 
 import 'package:flutter/material.dart';
-import 'package:sticky_session_app/components/background.dart';
-import 'package:sticky_session_app/components/custom_button.dart';
-import 'package:sticky_session_app/components/custom_input_field.dart';
-import 'package:sticky_session_app/components/release_version.dart';
+import 'package:sticky_session_app/widgets/background.dart';
+import 'package:sticky_session_app/widgets/custom_button.dart';
+import 'package:sticky_session_app/widgets/custom_input_field.dart';
+import 'package:sticky_session_app/widgets/release_version.dart';
 import 'package:sticky_session_app/constants.dart';
 
 class Body extends StatelessWidget {
