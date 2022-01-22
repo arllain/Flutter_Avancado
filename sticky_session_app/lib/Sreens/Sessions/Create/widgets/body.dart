@@ -29,7 +29,7 @@ class Body extends StatelessWidget {
             const TextFieldContainer(
               child: Text(
                 "Select a color",
-                style: TextStyle(fontSize: 18, color: kGrayTextColor),
+                style: TextStyle(fontSize: 18, color: kGrayColor),
               ),
             ),
             const SelectedColor(),

@@ -1,5 +1,3 @@
-import 'dart:developer';
-
 import 'package:flutter/material.dart';
 import 'package:sticky_session_app/Sreens/Sessions/Blank/session_screen.dart';
 import 'package:sticky_session_app/widgets/background.dart';
@@ -37,7 +35,7 @@ class Body extends StatelessWidget {
                 onChanged: (value) {}),
             CustomButton(
               text: "Log In",
-              color: kButtonColor,
+              color: kRedColor,
               textColor: Colors.white,
               fontSize: 16,
               fontWeight: FontWeight.w500,

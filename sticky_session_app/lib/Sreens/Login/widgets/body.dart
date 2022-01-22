@@ -30,7 +30,7 @@ class Body extends StatelessWidget {
             SizedBox(height: size.height * 0.25),
             CustomButton(
               text: "Log In with Gmail",
-              color: kButtonColor,
+              color: kRedColor,
               textColor: Colors.white,
               fontSize: 16,
               fontWeight: FontWeight.w500,
