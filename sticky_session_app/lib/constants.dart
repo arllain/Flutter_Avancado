@@ -6,3 +6,5 @@ const kGrayColor = Color.fromARGB(255, 144, 144, 144);
 const kPrimaryLightColor = Color(0xFFF1E6FF);
 const kGrayBackGroundColor = Color.fromARGB(255, 243, 243, 243);
 const kGrayTextColor = Color.fromARGB(255, 139, 139, 139);
+const kLightGrayColor = Color.fromARGB(255, 174, 174, 174);
+const kDarkGrayColor = Color.fromARGB(255, 139, 139, 139);
