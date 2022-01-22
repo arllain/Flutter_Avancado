@@ -3,8 +3,8 @@ import 'package:sticky_session_app/Sreens/Sessions/Blank/session_screen.dart';
 import 'package:sticky_session_app/widgets/background.dart';
 import 'package:sticky_session_app/widgets/custom_button.dart';
 import 'package:sticky_session_app/widgets/custom_input_field.dart';
-import 'package:sticky_session_app/widgets/release_version.dart';
 import 'package:sticky_session_app/constants.dart';
+import 'package:sticky_session_app/widgets/release_version.dart';
 
 class Body extends StatelessWidget {
   const Body({Key? key}) : super(key: key);
@@ -50,11 +50,16 @@ class Body extends StatelessWidget {
                 )
               },
             ),
+            const SizedBox(
+              height: 145,
+            ),
+            const ReleaseVersion(
+                fontSize: 13,
+                fontWeight: FontWeight.w500,
+                textColor: kLightGrayColor),
           ],
         ),
       ),
-      releaseVersion: const ReleaseVersion(
-          fontSize: 13, fontWeight: FontWeight.bold, textColor: kGrayColor),
     );
   }
 }

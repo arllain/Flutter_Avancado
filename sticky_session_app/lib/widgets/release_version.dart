@@ -18,8 +18,8 @@ class ReleaseVersion extends StatelessWidget {
   }
 
   Widget newPositioned() {
-    return Positioned(
-      bottom: 5,
+    return Align(
+      alignment: Alignment.bottomCenter,
       child: Text(
         "v 01.00.00",
         style: TextStyle(
