@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:sticky_session_app/Sreens/Sessions/Blank/session_screen.dart';
+import 'package:sticky_session_app/Sreens/Sessions/sessions_screen.dart';
 import 'package:sticky_session_app/widgets/background.dart';
 import 'package:sticky_session_app/widgets/custom_button.dart';
 import 'package:sticky_session_app/widgets/custom_input_field.dart';
@@ -44,7 +44,7 @@ class Body extends StatelessWidget {
                   context,
                   MaterialPageRoute(
                     builder: (context) {
-                      return const SessionScreen();
+                      return const SessionsScreen();
                     },
                   ),
                 )
