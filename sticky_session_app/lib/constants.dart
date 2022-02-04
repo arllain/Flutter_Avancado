@@ -14,4 +14,5 @@ const kGrayColor3 = Color.fromARGB(255, 243, 243, 243);
 const String loginRouter = '/login';
 const String loginTokenRouter = '/login/token';
 const String sessionsRouter = '/sessions';
+const String sessionCreateRouter = '/session/create';
 const String retrospectiveRouter = '/retrospective';
