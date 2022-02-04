@@ -27,7 +27,6 @@ class _RetrospectiveScreenState extends State<RetrospectiveScreen> {
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           Navigator.of(context).pushNamed('/sessions/create');
-          //Navigator.pushNamed(context, '/sessions/Create/session/create');
         },
         child: const Icon(Icons.add),
       ),

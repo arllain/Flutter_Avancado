@@ -16,3 +16,4 @@ const String loginTokenRouter = '/login/token';
 const String sessionsRouter = '/sessions';
 const String sessionCreateRouter = '/session/create';
 const String retrospectiveRouter = '/retrospective';
+const String notificationRouter = '/notification';

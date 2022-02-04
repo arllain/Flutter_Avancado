@@ -24,10 +24,6 @@ AppBar buildAppBar(BuildContext context) {
     elevation: 1,
     backgroundColor: Colors.white,
     foregroundColor: kRedColor,
-    // leading: const Icon(
-    //   Icons.menu,
-    //   color: Colors.red,
-    // ),
     centerTitle: true,
     title: const Text(
       "Mettings",
@@ -41,7 +37,9 @@ AppBar buildAppBar(BuildContext context) {
           Icons.notifications,
           color: kDarkGrayColor,
         ),
-        onPressed: () {},
+        onPressed: () {
+          Navigator.pushNamed(context, notificationRouter);
+        },
       )
     ],
   );

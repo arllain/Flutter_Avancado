@@ -5,6 +5,7 @@ import 'package:sticky_session_app/Sreens/Sessions/sessions_screen.dart';
 import 'Sreens/LoginToken/login_token_screen.dart';
 import 'Sreens/Retrospective/retrospective_screen.dart';
 import 'Sreens/Sessions/Create/session_create_screen.dart';
+import 'Sreens/notification/notification_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -26,6 +27,7 @@ class MyApp extends StatelessWidget {
         '/sessions': (context) => const SessionsScreen(),
         '/sessions/create': (context) => const SessionCreateScreen(),
         '/retrospective': (context) => const RetrospectiveScreen(),
+        '/notification': (context) => const NotificationScreen(),
       },
       initialRoute: "/login",
     );
