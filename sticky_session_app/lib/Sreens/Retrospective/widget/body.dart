@@ -12,7 +12,9 @@ class Body extends StatelessWidget {
       child: Column(crossAxisAlignment: CrossAxisAlignment.stretch, children: [
         ListView.builder(
           itemBuilder: (context, index) => GestureDetector(
-              onTap: () {},
+              onTap: () {
+                Navigator.pushNamed(context, notesRouter);
+              },
               child: Container(
                 color: Colors.white,
                 margin: const EdgeInsets.only(top: 24),

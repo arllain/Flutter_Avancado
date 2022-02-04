@@ -5,40 +5,68 @@ import 'dart:developer';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:sticky_session_app/constants.dart';
-import 'widgets/body.dart';
 
-class NoteCreateScreen extends StatelessWidget {
+class NoteCreateScreen extends StatefulWidget {
   const NoteCreateScreen({Key? key}) : super(key: key);
+
+  @override
+  State<NoteCreateScreen> createState() => _NoteCreateScreenState();
+}
+
+class _NoteCreateScreenState extends State<NoteCreateScreen> {
+  var textControllerNote = TextEditingController();
+  var isButtonEnabled = false;
+
+  void updateButtonStatus() {
+    setState(() {
+      isButtonEnabled = textControllerNote.text.isNotEmpty;
+    });
+  }
+
+  @override
+  void initState() {
+    super.initState();
+
+    textControllerNote.addListener(() => updateButtonStatus());
+  }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: buildAppBar(context),
-      body: const Body(),
       backgroundColor: kGrayBackGroundColor,
+      appBar: buildAppBar(context),
+      body: Container(
+        decoration: BoxDecoration(
+            color: Colors.white, borderRadius: BorderRadius.circular(10.0)),
+        child: TextField(
+          maxLines: 10,
+          decoration: const InputDecoration(
+            border: InputBorder.none,
+            hintText: 'Write a note...',
+            contentPadding: EdgeInsets.all(10.0),
+          ),
+          controller: textControllerNote,
+        ),
+      ),
     );
   }
 
   AppBar buildAppBar(BuildContext context) {
     return AppBar(
+      backgroundColor: Colors.white,
+      foregroundColor: kRedColor,
+      elevation: 1,
+      centerTitle: true,
       title: const Text(
         "Create Note",
         style: TextStyle(
             color: Colors.red, fontSize: 20, fontWeight: FontWeight.w500),
       ),
-      backgroundColor: Colors.white,
-      elevation: 0,
-      leading: IconButton(
-          icon: const Icon(Icons.arrow_back),
-          color: Colors.red,
-          onPressed: () {
-            Navigator.pop(context, true);
-          }),
-      actions: <Widget>[
+      actions: [
         IconButton(
-          icon: const Icon(
+          icon: Icon(
             Icons.check,
-            color: Colors.green,
+            color: isButtonEnabled ? Colors.green : Colors.grey,
           ),
           onPressed: () {
             log("save note");

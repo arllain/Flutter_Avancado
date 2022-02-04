@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:sticky_session_app/Sreens/Login/login_screen.dart';
+import 'package:sticky_session_app/Sreens/Notes/Create/note_create_screen.dart';
 import 'package:sticky_session_app/Sreens/Sessions/sessions_screen.dart';
 
 import 'Sreens/LoginToken/login_token_screen.dart';
+import 'Sreens/Notes/notes_screen.dart';
 import 'Sreens/Retrospective/retrospective_screen.dart';
 import 'Sreens/Sessions/Create/session_create_screen.dart';
 import 'Sreens/notification/notification_screen.dart';
@@ -28,6 +30,8 @@ class MyApp extends StatelessWidget {
         '/sessions/create': (context) => const SessionCreateScreen(),
         '/retrospective': (context) => const RetrospectiveScreen(),
         '/notification': (context) => const NotificationScreen(),
+        '/notes': (context) => const NotesScreen(),
+        '/notes/create': (context) => const NoteCreateScreen(),
       },
       initialRoute: "/login",
     );
