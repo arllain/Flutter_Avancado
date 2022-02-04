@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-
-import 'icon_row.dart';
+import 'package:sticky_session_app/constants.dart';
+import 'package:sticky_session_app/widgets/icon_row.dart';
 
 class MeetingCard extends StatefulWidget {
   final bool isRecent;
@@ -16,7 +16,7 @@ class _MeetingCardState extends State<MeetingCard> {
   Widget build(BuildContext context) {
     return GestureDetector(
         onTap: () {
-          // Navigator.pushNamed(context, routerRetrospective);
+          Navigator.pushNamed(context, retrospectiveRouter);
         },
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,

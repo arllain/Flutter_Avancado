@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:sticky_session_app/widgets/background.dart';
-import 'package:sticky_session_app/Sreens/LoginToken/login_token_screen.dart';
 import 'package:sticky_session_app/widgets/custom_button.dart';
 import 'package:sticky_session_app/constants.dart';
 
@@ -42,14 +41,7 @@ class Body extends StatelessWidget {
               fontSize: 16,
               fontWeight: FontWeight.w500,
               press: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) {
-                      return const LoginTokenScreen();
-                    },
-                  ),
-                );
+                Navigator.pushNamed(context, loginTokenRouter);
               },
             ),
           ],

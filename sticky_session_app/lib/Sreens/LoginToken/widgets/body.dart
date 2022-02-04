@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:sticky_session_app/Sreens/Sessions/sessions_screen.dart';
 import 'package:sticky_session_app/widgets/background.dart';
 import 'package:sticky_session_app/widgets/custom_button.dart';
 import 'package:sticky_session_app/widgets/custom_input_field.dart';
@@ -40,14 +39,7 @@ class Body extends StatelessWidget {
               fontSize: 16,
               fontWeight: FontWeight.w500,
               press: () => {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) {
-                      return const SessionsScreen();
-                    },
-                  ),
-                )
+                Navigator.pushNamed(context, sessionsRouter),
               },
             ),
             const SizedBox(
