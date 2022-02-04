@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:sticky_session_app/Sreens/Sessions/widget/body.dart';
 import 'package:sticky_session_app/constants.dart';
+import 'package:sticky_session_app/widgets/app_drawer.dart';
 
 class SessionsScreen extends StatelessWidget {
   const SessionsScreen({Key? key}) : super(key: key);
@@ -11,6 +12,7 @@ class SessionsScreen extends StatelessWidget {
       child: Scaffold(
         backgroundColor: Colors.white,
         appBar: buildAppBar(context),
+        drawer: const AppDrawer(),
         body: const Body(),
       ),
     );
@@ -21,10 +23,11 @@ AppBar buildAppBar(BuildContext context) {
   return AppBar(
     elevation: 1,
     backgroundColor: Colors.white,
-    leading: const Icon(
-      Icons.menu,
-      color: Colors.red,
-    ),
+    foregroundColor: kRedColor,
+    // leading: const Icon(
+    //   Icons.menu,
+    //   color: Colors.red,
+    // ),
     centerTitle: true,
     title: const Text(
       "Mettings",
