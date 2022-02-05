@@ -22,3 +22,5 @@ const String retrospectiveRouter = '/retrospective';
 const String notificationRouter = '/notification';
 const String notesRouter = '/notes';
 const String notesCreateRouter = '/notes/create';
+
+const String baseUri = 'https://study-web-app.herokuapp.com';

@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:sticky_session_app/Sreens/Login/login_screen.dart';
 import 'package:sticky_session_app/Sreens/Notes/Create/note_create_screen.dart';
 import 'package:sticky_session_app/Sreens/Sessions/sessions_screen.dart';
-
 import 'Sreens/LoginToken/login_token_screen.dart';
 import 'Sreens/Notes/notes_screen.dart';
 import 'Sreens/Retrospective/retrospective_screen.dart';
@@ -22,7 +21,6 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Sticky Session',
       theme: ThemeData(primarySwatch: Colors.red),
-      // home: const LoginScreen(),
       routes: {
         '/login': (context) => const LoginScreen(),
         '/login/token': (context) => const LoginTokenScreen(),
