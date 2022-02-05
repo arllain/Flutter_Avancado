@@ -10,6 +10,7 @@ class CustomInputField extends StatelessWidget {
   final String textLabel;
   final Color color;
   final ValueChanged<String> onChanged;
+  final TextEditingController? controller;
 
   const CustomInputField({
     Key? key,
@@ -21,12 +22,14 @@ class CustomInputField extends StatelessWidget {
     required this.textLabel,
     required this.color,
     required this.onChanged,
+    this.controller,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return TextFieldContainer(
       child: TextField(
+        controller: controller,
         onChanged: onChanged,
         keyboardType: keyboardType,
         maxLines: maxLines,

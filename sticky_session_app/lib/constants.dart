@@ -9,6 +9,7 @@ const kLightGrayColor = Color.fromARGB(255, 174, 174, 174);
 const kDarkGrayColor = Color.fromARGB(255, 139, 139, 139);
 const kRedColor = Color.fromARGB(255, 254, 42, 32);
 const kGrayColor2 = Color.fromARGB(255, 213, 213, 213);
+const kDesabledColor = Color.fromARGB(255, 226, 226, 226);
 const kGrayColor3 = Color.fromARGB(255, 243, 243, 243);
 const kLightGreen = Color.fromARGB(255, 203, 255, 230);
 const kGreen = Color.fromARGB(255, 0, 194, 121);
