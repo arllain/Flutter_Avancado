@@ -18,7 +18,7 @@ class _MeetingCardState extends State<MeetingCard> {
   Widget build(BuildContext context) {
     return GestureDetector(
         onTap: () {
-          Navigator.pushNamed(context, retrospectiveRouter, arguments: widget.meeting);
+          Navigator.of(context).pushNamed(retrospectiveRouter, arguments: widget.meeting);
         },
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -43,7 +43,7 @@ class _MeetingCardState extends State<MeetingCard> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text(widget.meeting.title ?? "",
+                  Text(widget.meeting.title,
                       style: TextStyle(
                           color: widget.isRecent ? Colors.white : Colors.black,
                           fontWeight: FontWeight.bold,
@@ -54,7 +54,7 @@ class _MeetingCardState extends State<MeetingCard> {
                         color: widget.isRecent ? Colors.white : Colors.black,
                       )),
                   const SizedBox(height: 8),
-                  Text(widget.meeting.description ??"",
+                  Text(widget.meeting.description,
                       style: const TextStyle(
                         color: Colors.grey,
                       )),
