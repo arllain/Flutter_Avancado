@@ -19,7 +19,7 @@ class Session {
   String meetingId;
   String name;
   String description;
-  List<Column> columns;
+  List<SessionColumn> columns;
   String highlight;
   int answer;
 
@@ -28,7 +28,7 @@ class Session {
     meetingId: json["meetingId"],
     name: json["name"],
     description: json["description"],
-    columns: List<Column>.from(json["columns"].map((x) => Column.fromJson(x))),
+    columns: List<SessionColumn>.from(json["columns"].map((x) => SessionColumn.fromJson(x))),
     highlight: json["highlight"],
     answer: json["answer"],
   );
@@ -44,8 +44,8 @@ class Session {
   };
 }
 
-class Column {
-  Column({
+class SessionColumn {
+  SessionColumn({
     required this.name,
     required this.color,
   });
@@ -53,7 +53,7 @@ class Column {
   String name;
   String color;
 
-  factory Column.fromJson(Map<String, dynamic> json) => Column(
+  factory SessionColumn.fromJson(Map<String, dynamic> json) => SessionColumn(
     name: json["name"],
     color: json["color"],
   );

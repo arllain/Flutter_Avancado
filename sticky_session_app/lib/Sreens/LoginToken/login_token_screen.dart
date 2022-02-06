@@ -17,12 +17,13 @@ class _LoginTokenScreenState extends State<LoginTokenScreen> {
   var textControllerToken = TextEditingController();
   var textControllerUsername = TextEditingController();
 
-  var isButtonEnabled = false;
+  var isButtonEnabled = true;
 
   void updateButtonStatus() {
     setState(() {
-      isButtonEnabled = textControllerToken.text.isNotEmpty &&
-          textControllerUsername.text.isNotEmpty;
+      isButtonEnabled = true;
+      // isButtonEnabled = textControllerToken.text.isNotEmpty &&
+      //     textControllerUsername.text.isNotEmpty;
     });
   }
 

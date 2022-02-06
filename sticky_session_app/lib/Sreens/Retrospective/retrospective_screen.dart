@@ -52,7 +52,7 @@ class _RetrospectiveScreenState extends State<RetrospectiveScreen> {
                           itemCount: state.sessions.length,
                           itemBuilder: (context, index) => GestureDetector(
                               onTap: () {
-                                Navigator.pushNamed(context, notesRouter);
+                                Navigator.of(context).pushNamed(notesRouter, arguments: state.sessions[index]);
                               },
                               child: Container(
                                 color: Colors.white,
@@ -109,7 +109,8 @@ class _RetrospectiveScreenState extends State<RetrospectiveScreen> {
                 } else {
                   return const Text("Something went wrong");
                 }
-              }),
+              }
+              ),
         )
     );
   }

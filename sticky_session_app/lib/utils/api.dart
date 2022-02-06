@@ -2,6 +2,7 @@ import 'package:http/http.dart' as http;
 import 'package:sticky_session_app/constants.dart';
 import 'package:sticky_session_app/models/meeting.dart';
 import 'package:sticky_session_app/models/session.dart';
+import 'package:sticky_session_app/models/sticky.dart';
 
 class API {
 
@@ -27,5 +28,15 @@ class API {
     }
   }
 
+  Future<List<Sticky>?> getNotes(String url) async{
+
+    final response = await http.get(Uri.parse(baseUri + url));
+
+    if(response.statusCode == 200) {
+      return stickyFromJson(response.body);
+    }else {
+      throw Exception(response.statusCode);
+    }
+  }
 
 }
