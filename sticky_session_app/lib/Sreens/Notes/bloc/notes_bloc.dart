@@ -2,7 +2,6 @@ import 'dart:async';
 
 import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
-import 'package:sticky_session_app/models/notes_model.dart';
 import 'package:sticky_session_app/models/session.dart';
 import 'package:sticky_session_app/models/sticky.dart';
 import 'package:sticky_session_app/utils/api.dart';
@@ -26,11 +25,11 @@ class NotesBloc extends Bloc<NotesEvent, NotesState> {
         if (stickyByColumnMap.containsKey(sticky.columnName)) {
           stickyByColumnMap[sticky.columnName]!.add(sticky);
         } else {
-          stickyByColumnMap[sticky.columnName ?? ""] = [sticky];
+          stickyByColumnMap[sticky.columnName] = [sticky];
         }
       }
 
-      emit(NotesLoadedState(stickyByColumnMap));
+      emit(NotesLoadedState(this.session.columns,stickyByColumnMap));
     });
   }
 }

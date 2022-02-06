@@ -13,11 +13,11 @@ class NotesLoadingState extends NotesState {
 
 class NotesLoadedState extends NotesState {
 
+  final List<SessionColumn> sessionColumns;
   final Map<String, List<Sticky>> stickyByColumnMap;
 
-  const NotesLoadedState(this.stickyByColumnMap);
+  const NotesLoadedState(this.sessionColumns,this.stickyByColumnMap);
 
   @override
-  List<Object> get props => [stickyByColumnMap];
-
+  List<Object> get props => [sessionColumns, stickyByColumnMap];
 }

@@ -3,6 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:sticky_session_app/Sreens/Retrospective/bloc/retrospective_bloc.dart';
 import 'package:sticky_session_app/constants.dart';
 import 'package:sticky_session_app/models/meeting.dart';
+import 'package:sticky_session_app/utils/utils.dart';
 import 'package:sticky_session_app/widgets/icon_row.dart';
 
 class RetrospectiveScreen extends StatefulWidget {
@@ -62,7 +63,7 @@ class _RetrospectiveScreenState extends State<RetrospectiveScreen> {
                                     Container(
                                       width: 6,
                                       height: 135,
-                                      color: kLightPurpleColor,
+                                      color: Utils.hexToColor('#${state.sessions[index].highlight}'),
                                     ),
                                     Container(
                                         width: MediaQuery.of(context).size.width - 10,
