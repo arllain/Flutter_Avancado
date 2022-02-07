@@ -16,7 +16,7 @@ class RetrospectiveBloc extends Bloc<RetrospectiveEvent, RetrospectiveState> {
   RetrospectiveBloc(this.meetingId) : super(RetrospectiveLoadingState()) {
     on<RetrospectiveEvent>((event, emit) async {
       emit(RetrospectiveLoadingState());
-      final sessions = await _api.getSessions('/session?meetingId=${meetingId}');
+      final sessions = await _api.getSessions('/session?meetingId=$meetingId');
       emit(RetrospectiveLoadedState(sessions!));
     });
   }
