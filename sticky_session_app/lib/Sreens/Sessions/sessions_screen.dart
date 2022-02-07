@@ -4,6 +4,7 @@ import 'package:sticky_session_app/Sreens/Sessions/bloc/sessions_bloc.dart';
 import 'package:sticky_session_app/Sreens/Sessions/widget/meeting_card.dart';
 import 'package:sticky_session_app/constants.dart';
 import 'package:sticky_session_app/widgets/app_drawer.dart';
+import 'package:sticky_session_app/widgets/custom_error_widget.dart';
 
 class SessionsScreen extends StatelessWidget {
   const SessionsScreen({Key? key}) : super(key: key);
@@ -66,7 +67,7 @@ class SessionsScreen extends StatelessWidget {
                   ),
                 );
               } else {
-                return const Text("Something went wrong");
+                return const CustomErrorWidget(message: "Something went wrong");
               }
             }),
           )),

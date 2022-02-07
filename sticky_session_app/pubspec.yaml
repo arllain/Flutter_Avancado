@@ -35,4 +35,5 @@ flutter:
   assets:
     - assets/icons/
     - assets/profile.png
+    - assets/sad_face.png
   
