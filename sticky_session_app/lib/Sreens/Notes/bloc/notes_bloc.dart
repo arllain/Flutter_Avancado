@@ -4,7 +4,7 @@ import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
 import 'package:sticky_session_app/models/session.dart';
 import 'package:sticky_session_app/models/sticky.dart';
-import 'package:sticky_session_app/utils/api.dart';
+import 'package:sticky_session_app/services/api.dart';
 
 part 'notes_event.dart';
 part 'notes_state.dart';

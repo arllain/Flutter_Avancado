@@ -3,7 +3,7 @@ import 'dart:async';
 import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
 import 'package:sticky_session_app/models/meeting.dart';
-import 'package:sticky_session_app/utils/api.dart';
+import 'package:sticky_session_app/services/api.dart';
 
 part 'sessions_event.dart';
 part 'sessions_state.dart';

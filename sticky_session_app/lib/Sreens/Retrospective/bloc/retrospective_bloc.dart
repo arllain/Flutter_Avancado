@@ -3,7 +3,7 @@ import 'dart:async';
 import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
 import 'package:sticky_session_app/models/session.dart';
-import 'package:sticky_session_app/utils/api.dart';
+import 'package:sticky_session_app/services/api.dart';
 
 part 'retrospective_event.dart';
 part 'retrospective_state.dart';
