@@ -6,6 +6,7 @@ import 'package:sticky_session_app/models/meeting.dart';
 import 'package:sticky_session_app/utils/utils.dart';
 import 'package:sticky_session_app/widgets/custom_error_widget.dart';
 import 'package:sticky_session_app/widgets/icon_row.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class RetrospectiveScreen extends StatefulWidget {
   const RetrospectiveScreen({Key? key}) : super(key: key);
@@ -24,14 +25,14 @@ class _RetrospectiveScreenState extends State<RetrospectiveScreen> {
           backgroundColor: Colors.white,
           foregroundColor: kRedColor,
           shadowColor: Colors.grey.shade50,
-          title: const Text(
-            'Retrospective',
+          title: Text(
+            AppLocalizations.of(context)!.retrospective,
           ),
           centerTitle: true,
         ),
         floatingActionButton: FloatingActionButton(
           onPressed: () {
-            Navigator.of(context).pushNamed('/sessions/create');
+            Navigator.of(context).pushNamed(sessionCreateRouter);
           },
           child: const Icon(Icons.add),
         ),
@@ -113,7 +114,7 @@ class _RetrospectiveScreenState extends State<RetrospectiveScreen> {
                                                   isRecent: false,
                                                   icon: Icons.message,
                                                   text:
-                                                      "${state.sessions[index].answer} responses"),
+                                                      "${state.sessions[index].answer} ${AppLocalizations.of(context)!.responses}"),
                                             ],
                                           ))
                                     ],
@@ -136,14 +137,14 @@ class _RetrospectiveScreenState extends State<RetrospectiveScreen> {
                           width: 40,
                           height: 40,
                         ),
-                        const Text(
-                          'There is no sessions.',
-                          style: TextStyle(color: kDarkGrayColor, fontSize: 17),
+                        Text(
+                          AppLocalizations.of(context)!.there_is_no_sessions,
+                          style: const TextStyle(color: kDarkGrayColor, fontSize: 17),
                         ),
-                        const Text(
-                          "Create one by clicking in + button",
+                        Text(
+                          AppLocalizations.of(context)!.create_one_by_clicking_button,
                           style:
-                              TextStyle(color: kLightGrayColor, fontSize: 13),
+                              const TextStyle(color: kLightGrayColor, fontSize: 13),
                         ),
                       ],
                     ),
@@ -151,7 +152,7 @@ class _RetrospectiveScreenState extends State<RetrospectiveScreen> {
                 );
               }
             } else {
-              return const CustomErrorWidget(message: "Something went wrong");
+              return CustomErrorWidget(message: AppLocalizations.of(context)!.something_went_wrong);
             }
           }),
         ));

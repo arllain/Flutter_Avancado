@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:sticky_session_app/constants.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+
 
 class AppDrawer extends StatefulWidget {
   const AppDrawer({Key? key}) : super(key: key);
@@ -39,38 +41,38 @@ class _AppDrawerState extends State<AppDrawer> {
           ),
           ListTile(
             title: Row(
-              children: const [
-                Icon(
+              children: [
+                const Icon(
                   Icons.coffee,
                   color: kRedColor,
                 ),
-                SizedBox(
+                const SizedBox(
                   width: 8,
                 ),
                 Text(
-                  'Meetings',
+                  AppLocalizations.of(context)!.mettings,
                   style:
-                      TextStyle(fontWeight: FontWeight.bold, color: kRedColor),
+                      const TextStyle(fontWeight: FontWeight.bold, color: kRedColor),
                 )
               ],
             ),
             onTap: () {
-              Navigator.pushNamed(context, '/sessions');
+              Navigator.pushNamed(context, sessionsRouter);
             },
           ),
           ListTile(
             title: Row(
-              children: const [
-                Icon(
+              children: [
+                const Icon(
                   Icons.info,
                   color: Colors.grey,
                 ),
-                SizedBox(
+                const SizedBox(
                   width: 8,
                 ),
                 Text(
-                  'About',
-                  style: TextStyle(
+                  AppLocalizations.of(context)!.about,
+                  style: const TextStyle(
                       fontWeight: FontWeight.bold, color: Colors.grey),
                 )
               ],
@@ -79,14 +81,14 @@ class _AppDrawerState extends State<AppDrawer> {
           ),
           ListTile(
             title: Row(
-              children: const [
-                Icon(Icons.settings, color: Colors.grey),
-                SizedBox(
+              children:  [
+                const Icon(Icons.settings, color: Colors.grey),
+                const SizedBox(
                   width: 8,
                 ),
                 Text(
-                  'Settings',
-                  style: TextStyle(
+                  AppLocalizations.of(context)!.settings,
+                  style: const TextStyle(
                       fontWeight: FontWeight.bold, color: Colors.grey),
                 )
               ],
@@ -96,15 +98,15 @@ class _AppDrawerState extends State<AppDrawer> {
           const Spacer(),
           ListTile(
             title: Row(
-              children: const [
-                Icon(Icons.logout, color: kRedColor),
-                SizedBox(
+              children: [
+                const Icon(Icons.logout, color: kRedColor),
+                const SizedBox(
                   width: 8,
                 ),
                 Text(
-                  'Logout',
+                  AppLocalizations.of(context)!.logout,
                   style:
-                      TextStyle(fontWeight: FontWeight.bold, color: kRedColor),
+                      const TextStyle(fontWeight: FontWeight.bold, color: kRedColor),
                 )
               ],
             ),

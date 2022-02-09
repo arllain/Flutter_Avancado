@@ -5,6 +5,7 @@ import 'package:sticky_session_app/Sreens/Sessions/widget/meeting_card.dart';
 import 'package:sticky_session_app/constants.dart';
 import 'package:sticky_session_app/widgets/app_drawer.dart';
 import 'package:sticky_session_app/widgets/custom_error_widget.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class SessionsScreen extends StatelessWidget {
   const SessionsScreen({Key? key}) : super(key: key);
@@ -31,11 +32,11 @@ class SessionsScreen extends StatelessWidget {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.stretch,
                       children: [
-                        const Padding(
-                          padding: EdgeInsets.fromLTRB(16, 16, 16, 8),
+                        Padding(
+                          padding: const EdgeInsets.fromLTRB(16, 16, 16, 8),
                           child: Text(
-                            "Recents",
-                            style: TextStyle(
+                            AppLocalizations.of(context)!.recents,
+                            style: const TextStyle(
                                 color: kDarkGrayColor,
                                 fontWeight: FontWeight.bold),
                           ),
@@ -47,11 +48,11 @@ class SessionsScreen extends StatelessWidget {
                         //       isRecent: true, meeting: state.meetings[index]),
                         //   shrinkWrap: true,
                         // ),
-                        const Padding(
-                          padding: EdgeInsets.fromLTRB(16, 16, 16, 8),
+                        Padding(
+                          padding: const EdgeInsets.fromLTRB(16, 16, 16, 8),
                           child: Text(
-                            "Older",
-                            style: TextStyle(
+                            AppLocalizations.of(context)!.older,
+                            style: const TextStyle(
                                 fontWeight: FontWeight.bold,
                                 color: Color(0xFF929292)),
                           ),
@@ -81,9 +82,9 @@ AppBar buildAppBar(BuildContext context) {
     backgroundColor: Colors.white,
     foregroundColor: kRedColor,
     centerTitle: true,
-    title: const Text(
-      "Mettings",
-      style: TextStyle(
+    title: Text(
+      AppLocalizations.of(context)!.mettings,
+      style: const TextStyle(
           color: Colors.red, fontSize: 20, fontWeight: FontWeight.w500),
       textAlign: TextAlign.center,
     ),

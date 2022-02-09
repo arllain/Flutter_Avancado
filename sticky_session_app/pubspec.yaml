@@ -9,6 +9,9 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+  intl: ^0.17.0
   cupertino_icons: ^1.0.2
   flutter_svg: ^1.0.1
   shared_preferences: ^2.0.12
@@ -32,6 +35,7 @@ flutter_native_splash:
 
 flutter:
   uses-material-design: true
+  generate: true
   assets:
     - assets/icons/
     - assets/profile.png

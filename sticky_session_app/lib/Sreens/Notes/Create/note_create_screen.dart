@@ -1,10 +1,9 @@
-// ignore_for_file: unnecessary_const
-
 import 'dart:developer';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:sticky_session_app/constants.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class NoteCreateScreen extends StatefulWidget {
   const NoteCreateScreen({Key? key}) : super(key: key);
@@ -40,10 +39,10 @@ class _NoteCreateScreenState extends State<NoteCreateScreen> {
             color: Colors.white, borderRadius: BorderRadius.circular(10.0)),
         child: TextField(
           maxLines: 10,
-          decoration: const InputDecoration(
+          decoration: InputDecoration(
             border: InputBorder.none,
-            hintText: 'Write a note...',
-            contentPadding: EdgeInsets.all(10.0),
+            hintText: AppLocalizations.of(context)!.write_a_note,
+            contentPadding: const EdgeInsets.all(10.0),
           ),
           controller: textControllerNote,
         ),
@@ -57,9 +56,9 @@ class _NoteCreateScreenState extends State<NoteCreateScreen> {
       foregroundColor: kRedColor,
       elevation: 1,
       centerTitle: true,
-      title: const Text(
-        "Create Note",
-        style: TextStyle(
+      title: Text(
+        AppLocalizations.of(context)!.create_a_note,
+        style: const TextStyle(
             color: Colors.red, fontSize: 20, fontWeight: FontWeight.w500),
       ),
       actions: [

@@ -6,6 +6,7 @@ import 'package:sticky_session_app/models/sticky.dart';
 import 'package:sticky_session_app/utils/utils.dart';
 import 'package:sticky_session_app/widgets/triangle_painter.dart';
 import 'bloc/notes_bloc.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class NotesScreen extends StatefulWidget {
   const NotesScreen({Key? key}) : super(key: key);
@@ -104,7 +105,7 @@ class _NotesScreenState extends State<NotesScreen> {
                                   onPressed: () {
                                     Navigator.of(context).pushNamed(notesCreateRouter);
                                   },
-                                  child: const Text("+ NEW NOTE")),
+                                  child:  Text(AppLocalizations.of(context)!.create_new_note)),
                               const SizedBox(
                                 height: 16,
                               ),

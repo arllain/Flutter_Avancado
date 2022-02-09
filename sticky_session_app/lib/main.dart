@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:sticky_session_app/Sreens/Login/login_screen.dart';
 import 'package:sticky_session_app/Sreens/Notes/Create/note_create_screen.dart';
 import 'package:sticky_session_app/Sreens/Sessions/sessions_screen.dart';
@@ -8,8 +10,15 @@ import 'Sreens/Retrospective/retrospective_screen.dart';
 import 'Sreens/Sessions/Create/session_create_screen.dart';
 import 'Sreens/notification/notification_screen.dart';
 
+
 void main() {
-  runApp(const MyApp());
+    runApp( const MaterialApp(
+      localizationsDelegates: AppLocalizations.localizationsDelegates,
+      supportedLocales: AppLocalizations.supportedLocales,
+      debugShowCheckedModeBanner: false,
+      home: MyApp(),
+    )
+  );
 }
 
 class MyApp extends StatelessWidget {
@@ -18,8 +27,10 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      localizationsDelegates: AppLocalizations.localizationsDelegates,
+      supportedLocales: AppLocalizations.supportedLocales,
       debugShowCheckedModeBanner: false,
-      title: 'Sticky Session',
+      title: AppLocalizations.of(context)!.title,
       theme: ThemeData(primarySwatch: Colors.red),
       routes: {
         '/login': (context) => const LoginScreen(),

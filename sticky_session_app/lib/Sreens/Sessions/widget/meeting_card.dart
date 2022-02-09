@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:sticky_session_app/constants.dart';
 import 'package:sticky_session_app/models/meeting.dart';
 import 'package:sticky_session_app/widgets/icon_row.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class MeetingCard extends StatefulWidget {
   final bool isRecent;
@@ -62,12 +63,12 @@ class _MeetingCardState extends State<MeetingCard> {
                   IconRow(
                       isRecent: widget.isRecent,
                       icon: Icons.message,
-                      text: "${widget.meeting.sessions} sessions"),
+                      text: "${widget.meeting.sessions} ${AppLocalizations.of(context)!.mettings}"),
                   const SizedBox(height: 6),
                   IconRow(
                       isRecent: widget.isRecent,
                       icon: Icons.people,
-                      text: "${widget.meeting.people} participants"),
+                      text: "${widget.meeting.people} ${AppLocalizations.of(context)!.participants}"),
                 ],
               ),
             )

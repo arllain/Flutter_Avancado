@@ -1,0 +1,132 @@
+{
+  "title": "Sticky Sessions",
+  "@title": {
+    "description": "Sticky Sessions",
+    "type": "String"
+  },
+  "logInWithGmail": "Log in with Gmail",
+  "@logInWithGmail": {
+    "description": "Log in with Gmail",
+    "type": "String"
+  },
+  "logInWithToken": "Log in with Token",
+  "@logInWithToken": {
+    "description": "Log in with Token",
+    "type": "String"
+  },
+  "logInWithTokenText": "If you do not have a token, ask for meeting admin",
+  "@logInWithTokenText": {
+    "description": "If you do not have a token, ask for meeting admin",
+    "type": "String"
+  },
+  "token": "Token",
+  "@token": {
+    "description": "Token",
+    "type": "String"
+  },
+  "username": "UserName",
+  "@username": {
+    "description": "UserName",
+    "type": "String"
+  },
+  "login": "Log In",
+  "@login": {
+    "description": "Log In",
+    "type": "String"
+  },
+  "mettings": "Mettings",
+  "@mettings": {
+    "description": "Mettings",
+    "type": "String"
+  },
+  "recents": "Recents",
+  "@recents": {
+    "description": "Recents",
+    "type": "String"
+  },
+  "older": "Older",
+  "@older": {
+    "description": "Older",
+    "type": "String"
+  },
+  "something_went_wrong": "Something went wrong",
+  "@something_went_wrong": {
+    "description": "Something went wrong",
+    "type": "String"
+  },
+  "participants": "participants",
+  "@participants": {
+    "description": "participants",
+    "type": "String"
+  },
+  "retrospective": "Retrospective",
+  "@retrospective": {
+    "description": "Retrospective",
+    "type": "String"
+  },
+  "responses": "responses",
+  "@responses": {
+    "description": "responses",
+    "type": "String"
+  },
+  "there_is_no_sessions": "There is no sessions.",
+  "@there_is_no_sessions": {
+    "description": "responses",
+    "type": "String"
+  },
+  "create_one_by_clicking_button": "Create one by clicking in + button",
+  "@create_one_by_clicking_button": {
+    "description": "Create one by clicking in + button",
+    "type": "String"
+  },
+  "write_a_note": "Write a note...",
+  "@write_a_note": {
+    "description": "Write a note...",
+    "type": "String"
+  },
+  "create_a_note": "Create Note",
+  "@create_a_note": {
+    "description": "Create Note",
+    "type": "String"
+  },
+  "create_new_note": "+ NEW NOTE",
+  "@create_new_note": {
+    "description": "+ NEW NOTE",
+    "type": "String"
+  },
+  "create_session": "Create Session",
+  "@create_session": {
+    "description": "Create Session",
+    "type": "String"
+  },
+  "session_title": "Title",
+  "@session_title": {
+    "description": "Title",
+    "type": "String"
+  },
+  "session_description": "Description",
+  "@session_description": {
+    "description": "Description",
+    "type": "String"
+  },
+  "select_a_color": "Select a color",
+  "@select_a_color": {
+    "description": "Select a color",
+    "type": "String"
+  },
+  "about": "About",
+  "@about": {
+    "description": "About",
+    "type": "String"
+  },
+  "settings": "Settings",
+  "@settings": {
+    "description": "Settings",
+    "type": "String"
+  },
+  "logout": "Logout",
+  "@logout": {
+    "description": "Logout",
+    "type": "String"
+  }
+}
