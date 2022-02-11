@@ -1,5 +1,3 @@
-import 'dart:async';
-
 import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
 import 'package:internet_connection_checker/internet_connection_checker.dart';
@@ -11,7 +9,6 @@ part 'retrospective_state.dart';
 
 class RetrospectiveBloc extends Bloc<RetrospectiveEvent, RetrospectiveState> {
 
-  final API _api = API();
   final String meetingId;
 
   RetrospectiveBloc(this.meetingId) : super(RetrospectiveLoadingState()) {
@@ -19,7 +16,7 @@ class RetrospectiveBloc extends Bloc<RetrospectiveEvent, RetrospectiveState> {
       emit(RetrospectiveLoadingState());
       final hasInternet = await InternetConnectionChecker().hasConnection;
       if(hasInternet) {
-        final sessions = await _api.getSessions('/session?meetingId=$meetingId');
+        final sessions = await API.getSessions('/session?meetingId=$meetingId');
         emit(RetrospectiveLoadedState(sessions!));
       }else {
         emit(SessionsNoInternetState());

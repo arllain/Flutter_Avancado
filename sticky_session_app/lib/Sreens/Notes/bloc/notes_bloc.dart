@@ -1,5 +1,3 @@
-import 'dart:async';
-
 import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
 import 'package:internet_connection_checker/internet_connection_checker.dart';
@@ -12,7 +10,6 @@ part 'notes_state.dart';
 
 class NotesBloc extends Bloc<NotesEvent, NotesState> {
 
-  final API _api = API();
   final Session session;
 
 
@@ -22,7 +19,7 @@ class NotesBloc extends Bloc<NotesEvent, NotesState> {
 
       final hasInternet = await InternetConnectionChecker().hasConnection;
       if(hasInternet) {
-        final notes = await _api.getNotes('/sticky?meetingId=${session.meetingId}&sessionId=${session.id}');
+        final notes = await API.getNotes('/sticky?meetingId=${session.meetingId}&sessionId=${session.id}');
 
         final Map<String, List<Sticky>> stickyByColumnMap = {};
         for (var sticky in notes!) {

@@ -6,7 +6,7 @@ import 'package:sticky_session_app/models/sticky.dart';
 
 class API {
 
-  Future<List<Meeting>?> getMettings(String url) async{
+  static Future<List<Meeting>?> getMettings(String url) async{
     
     final response = await http.get(Uri.parse(baseUri + url));
 
@@ -17,7 +17,7 @@ class API {
     }
   }
 
-  Future<List<Session>?> getSessions(String url) async{
+  static Future<List<Session>?> getSessions(String url) async{
 
     final response = await http.get(Uri.parse(baseUri + url));
 
@@ -28,7 +28,7 @@ class API {
     }
   }
 
-  Future<List<Sticky>?> getNotes(String url) async{
+  static Future<List<Sticky>?> getNotes(String url) async{
 
     final response = await http.get(Uri.parse(baseUri + url));
 

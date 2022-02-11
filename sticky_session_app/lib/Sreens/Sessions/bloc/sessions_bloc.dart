@@ -1,5 +1,3 @@
-import 'dart:async';
-
 import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
 import 'package:internet_connection_checker/internet_connection_checker.dart';
@@ -11,15 +9,13 @@ part 'sessions_state.dart';
 
 class SessionsBloc extends Bloc<SessionsEvent, SessionsState> {
 
-  final API _api = API();
-
   SessionsBloc() : super(SessionsLoadingState()) {
     on<LoadMeetingsEvent>((event, emit) async {
       emit(SessionsLoadingState());
 
       final hasInternet = await InternetConnectionChecker().hasConnection;
       if(hasInternet) {
-        final meetings = await _api.getMettings('/meeting');
+        final meetings = await API.getMettings('/meeting');
         emit(SessionsLoadedState(meetings!));
       }else {
         emit(SessionsNoInternetState());
