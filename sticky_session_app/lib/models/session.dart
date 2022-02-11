@@ -30,7 +30,8 @@ class Session {
     meetingId: json["meetingId"],
     name: json["name"],
     description: json["description"],
-    columns: List<SessionColumn>.from(json["columns"].map((x) => SessionColumn.fromJson(x))),
+    columns: json["columns"] is String ? List<SessionColumn>.from(jsonDecode(json["columns"]).map((x) => SessionColumn.fromJson(x)))
+        : List<SessionColumn>.from(json["columns"].map((x) => SessionColumn.fromJson(x))),
     highlight: json["highlight"],
     answer: json["answer"],
   );
@@ -40,7 +41,7 @@ class Session {
     "meetingId": meetingId,
     "name": name,
     "description": description,
-    "columns": List<dynamic>.from(columns.map((x) => x.toJson())),
+    "columns": jsonEncode(List<dynamic>.from(columns.map((x) => x.toJson()))),
     "highlight": highlight,
     "answer": answer,
   };
