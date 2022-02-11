@@ -46,6 +46,12 @@ class _RetrospectiveScreenState extends State<RetrospectiveScreen> {
                 child: CircularProgressIndicator(),
               );
             }
+
+            if (state is SessionsNoInternetState) {
+              return
+                const CustomErrorWidget(message: "No internet connection", icon: Icon(Icons.error, color: kDarkGrayColor));
+            }
+
             if (state is RetrospectiveLoadedState) {
               if (state.sessions.isNotEmpty) {
                 return SingleChildScrollView(
@@ -152,7 +158,8 @@ class _RetrospectiveScreenState extends State<RetrospectiveScreen> {
                 );
               }
             } else {
-              return CustomErrorWidget(message: AppLocalizations.of(context)!.something_went_wrong);
+              return CustomErrorWidget(message: AppLocalizations.of(context)!.something_went_wrong,
+                  icon: const Icon(Icons.error, color: kDarkGrayColor));
             }
           }),
         ));

@@ -4,10 +4,12 @@ import '../constants.dart';
 
 class CustomErrorWidget extends StatelessWidget {
   final String message;
+  final Icon icon;
 
   const CustomErrorWidget({
     Key? key,
     required this.message,
+    required this.icon,
   }) : super(key: key);
 
   @override
@@ -16,7 +18,7 @@ class CustomErrorWidget extends StatelessWidget {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          const Icon(Icons.error, color: kDarkGrayColor),
+          icon,
           Text(
             message,
             style: const TextStyle(color: kDarkGrayColor, fontSize: 17),

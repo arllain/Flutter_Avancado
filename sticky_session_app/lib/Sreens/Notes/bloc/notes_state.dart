@@ -21,3 +21,6 @@ class NotesLoadedState extends NotesState {
   @override
   List<Object> get props => [sessionColumns, stickyByColumnMap];
 }
+
+class SessionsNoInternetState extends NotesState {
+}

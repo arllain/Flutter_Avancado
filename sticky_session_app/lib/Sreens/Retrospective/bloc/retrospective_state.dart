@@ -18,5 +18,7 @@ class RetrospectiveLoadedState extends RetrospectiveState {
 
   @override
   List<Object> get props => [sessions];
+}
 
+class SessionsNoInternetState extends RetrospectiveState {
 }

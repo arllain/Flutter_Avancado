@@ -25,6 +25,12 @@ class SessionsScreen extends StatelessWidget {
                   child: CircularProgressIndicator(),
                 );
               }
+
+              if (state is SessionsNoInternetState) {
+                return
+                   const CustomErrorWidget(message: "No internet connection", icon: Icon(Icons.error, color: kDarkGrayColor));
+              }
+
               if (state is SessionsLoadedState) {
                 return SingleChildScrollView(
                   child: Container(
@@ -68,7 +74,7 @@ class SessionsScreen extends StatelessWidget {
                   ),
                 );
               } else {
-                return const CustomErrorWidget(message: "Something went wrong");
+                return const CustomErrorWidget(message: "Something went wrong",  icon: Icon(Icons.signal_cellular_connected_no_internet_4_bar, color: kDarkGrayColor));
               }
             }),
           )),

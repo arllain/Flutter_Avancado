@@ -4,6 +4,7 @@ import 'package:sticky_session_app/constants.dart';
 import 'package:sticky_session_app/models/session.dart';
 import 'package:sticky_session_app/models/sticky.dart';
 import 'package:sticky_session_app/utils/utils.dart';
+import 'package:sticky_session_app/widgets/custom_error_widget.dart';
 import 'package:sticky_session_app/widgets/triangle_painter.dart';
 import 'bloc/notes_bloc.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
@@ -35,6 +36,17 @@ class _NotesScreenState extends State<NotesScreen> {
               body: const Center(
                 child: CircularProgressIndicator(),
               ),
+            );
+          }
+          if (state is SessionsNoInternetState) {
+            return Scaffold(
+              appBar: AppBar(
+                backgroundColor: Colors.white,
+                foregroundColor: kRedColor,
+                shadowColor: Colors.grey.shade50,
+                title: Text(session.name),
+              ),
+              body: const CustomErrorWidget(message: "No internet connection", icon: Icon(Icons.error, color: kDarkGrayColor)),
             );
           }
           if (state is NotesLoadedState) {

@@ -18,6 +18,9 @@ class SessionsLoadedState extends SessionsState {
 
   @override
   List<Object> get props => [meetings];
-
 }
+
+class SessionsNoInternetState extends SessionsState {
+}
+
 
