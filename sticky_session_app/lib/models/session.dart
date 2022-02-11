@@ -1,5 +1,7 @@
 import 'dart:convert';
 
+import 'package:sticky_session_app/models/session_column.dart';
+
 List<Session> sessionFromJson(String str) => List<Session>.from(json.decode(str).map((x) => Session.fromJson(x)));
 
 String sessionToJson(List<Session> data) => json.encode(List<dynamic>.from(data.map((x) => x.toJson())));
@@ -44,22 +46,3 @@ class Session {
   };
 }
 
-class SessionColumn {
-  SessionColumn({
-    required this.name,
-    required this.color,
-  });
-
-  String name;
-  String color;
-
-  factory SessionColumn.fromJson(Map<String, dynamic> json) => SessionColumn(
-    name: json["name"],
-    color: json["color"],
-  );
-
-  Map<String, dynamic> toJson() => {
-    "name": name,
-    "color": color,
-  };
-}
