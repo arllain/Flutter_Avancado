@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:sticky_session_app/widgets/background.dart';
 import 'package:sticky_session_app/widgets/custom_button.dart';
 import 'package:sticky_session_app/constants.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class Body extends StatelessWidget {
   const Body({Key? key}) : super(key: key);
@@ -18,16 +19,16 @@ class Body extends StatelessWidget {
             SizedBox(height: size.height * 0.10),
             Image.asset("assets/icons/logo_symbol.png"),
             SizedBox(height: size.height * 0.02),
-            const Text(
-              "Sticky Sessions",
-              style: TextStyle(
+             Text(
+                AppLocalizations.of(context)!.title,
+              style: const TextStyle(
                   color: Colors.white,
                   fontWeight: FontWeight.bold,
                   fontSize: 19),
             ),
             SizedBox(height: size.height * 0.25),
             CustomButton(
-              text: "Log In with Gmail",
+              text: AppLocalizations.of(context)!.logInWithGmail,
               color: kRedColor,
               textColor: Colors.white,
               fontSize: 16,
@@ -35,7 +36,7 @@ class Body extends StatelessWidget {
               press: () {},
             ),
             CustomButton(
-              text: "Log In with the token",
+              text: AppLocalizations.of(context)!.logInWithToken,
               color: kPurpleColor,
               textColor: Colors.white,
               fontSize: 16,

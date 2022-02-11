@@ -5,6 +5,7 @@ import 'package:sticky_session_app/widgets/background.dart';
 import 'package:sticky_session_app/widgets/custom_button.dart';
 import 'package:sticky_session_app/widgets/custom_input_field.dart';
 import 'package:sticky_session_app/widgets/release_version.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class LoginTokenScreen extends StatefulWidget {
   const LoginTokenScreen({Key? key}) : super(key: key);
@@ -48,25 +49,25 @@ class _LoginTokenScreenState extends State<LoginTokenScreen> {
                 padding:
                     const EdgeInsets.symmetric(horizontal: 20, vertical: 0),
                 width: MediaQuery.of(context).size.width * 0.95,
-                child: const Text(
-                  "If you do not have a token, ask for meeting admin",
-                  style: TextStyle(fontSize: 19),
+                child: Text(
+                  AppLocalizations.of(context)!.logInWithTokenText,
+                  style: const TextStyle(fontSize: 19),
                 ),
               ),
               CustomInputField(
-                textLabel: "Token",
+                textLabel: AppLocalizations.of(context)!.token,
                 color: Colors.black,
                 onChanged: (value) {},
                 controller: textControllerToken,
               ),
               CustomInputField(
-                textLabel: "Username",
+                textLabel: AppLocalizations.of(context)!.username,
                 color: Colors.black,
                 onChanged: (value) {},
                 controller: textControllerUsername,
               ),
               CustomButton(
-                text: "Log In",
+                text: AppLocalizations.of(context)!.login,
                 color: isButtonEnabled ? kRedColor : kDesabledColor,
                 textColor: Colors.white,
                 fontSize: 16,
@@ -93,9 +94,9 @@ class _LoginTokenScreenState extends State<LoginTokenScreen> {
 
   AppBar buildAppBar(BuildContext context) {
     return AppBar(
-      title: const Text(
-        "Log In with the token",
-        style: TextStyle(
+      title: Text(
+        AppLocalizations.of(context)!.logInWithToken,
+        style: const TextStyle(
             color: Colors.red, fontSize: 20, fontWeight: FontWeight.w500),
       ),
       backgroundColor: Colors.white,

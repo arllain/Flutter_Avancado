@@ -17,8 +17,10 @@ const kGreen = Color.fromARGB(255, 0, 194, 121);
 const String loginRouter = '/login';
 const String loginTokenRouter = '/login/token';
 const String sessionsRouter = '/sessions';
-const String sessionCreateRouter = '/session/create';
+const String sessionCreateRouter = '/sessions/create';
 const String retrospectiveRouter = '/retrospective';
 const String notificationRouter = '/notification';
 const String notesRouter = '/notes';
 const String notesCreateRouter = '/notes/create';
+
+const String baseUri = 'https://study-web-app.herokuapp.com';

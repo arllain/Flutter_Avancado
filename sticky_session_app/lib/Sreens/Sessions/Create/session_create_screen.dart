@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:sticky_session_app/constants.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class SessionCreateScreen extends StatefulWidget {
   const SessionCreateScreen({Key? key}) : super(key: key);
@@ -62,8 +63,8 @@ class _SessionCreateScreenState extends State<SessionCreateScreen> {
               backgroundColor: Colors.white,
               foregroundColor: kRedColor,
               shadowColor: Colors.grey.shade50,
-              title: const Text(
-                'Create Session',
+              title:  Text(
+                AppLocalizations.of(context)!.create_session,
               ),
               actions: [
                 IconButton(
@@ -84,17 +85,17 @@ class _SessionCreateScreenState extends State<SessionCreateScreen> {
                 children: [
                   const SizedBox(height: 40),
                   TextField(
-                    decoration: const InputDecoration(
-                      border: OutlineInputBorder(),
-                      labelText: 'Title',
+                    decoration: InputDecoration(
+                      border: const OutlineInputBorder(),
+                      labelText: AppLocalizations.of(context)!.session_title,
                     ),
                     controller: textControllerTitle,
                   ),
                   const SizedBox(height: 20),
                   TextField(
-                    decoration: const InputDecoration(
-                      border: OutlineInputBorder(),
-                      labelText: 'Description',
+                    decoration: InputDecoration(
+                      border: const OutlineInputBorder(),
+                      labelText: AppLocalizations.of(context)!.session_description,
                     ),
                     maxLength: 30,
                     maxLines: 3,
@@ -104,7 +105,7 @@ class _SessionCreateScreenState extends State<SessionCreateScreen> {
                   ),
                   const SizedBox(height: 20),
                   Text(
-                    "Select a color",
+                    AppLocalizations.of(context)!.select_a_color,
                     style: TextStyle(
                         fontWeight: FontWeight.bold,
                         fontSize: 16,

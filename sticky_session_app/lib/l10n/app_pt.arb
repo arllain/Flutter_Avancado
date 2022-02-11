@@ -1,0 +1,132 @@
+{
+  "title": "Sessões Fixas",
+  "@title": {
+    "description": "Sessões Fixas",
+    "type": "String"
+  },
+  "logInWithGmail": "Log in com Gmail",
+  "@logInWithGmail": {
+    "description": "Log in com Gmail",
+    "type": "String"
+  },
+  "logInWithToken": "Log in com Token",
+  "@logInWithToken": {
+    "description": "Log in com Token",
+    "type": "String"
+  },
+  "logInWithTokenText": "Se você não tiver um token, peça o administrador da reunião",
+  "@logInWithTokenText": {
+    "description": "Se você não tiver um token, peça o administrador da reunião",
+    "type": "String"
+  },
+  "token": "Token",
+  "@token": {
+    "description": "Token",
+    "type": "String"
+  },
+  "username": "Usuário",
+  "@username": {
+    "description": "Usuário",
+    "type": "String"
+  },
+  "login": "Conecte-se",
+  "@login": {
+    "description": "Conecte-se",
+    "type": "String"
+  },
+  "mettings": "Reuniões",
+  "@mettings": {
+    "description": "Conecte-se",
+    "type": "String"
+  },
+  "recents": "Recentes",
+  "@recents": {
+    "description": "Recentes",
+    "type": "String"
+  },
+  "older": "Antigos",
+  "@older": {
+    "description": "Antigos",
+    "type": "String"
+  },
+  "something_went_wrong": "Algo deu errado",
+  "@something_went_wrong": {
+    "description": "Algo deu errado",
+    "type": "String"
+  },
+  "participants": "participantes",
+  "@participants": {
+    "description": "participantes",
+    "type": "String"
+  },
+  "retrospective": "Retrospectiva",
+  "@retrospective": {
+    "description": "Retrospectiva",
+    "type": "String"
+  },
+  "responses": "respostas",
+  "@responses": {
+    "description": "respostas",
+    "type": "String"
+  },
+  "there_is_no_sessions": "There is no sessions.",
+  "@there_is_no_sessions": {
+    "description": "responses",
+    "type": "String"
+  },
+  "create_one_by_clicking_button": "Create one by clicking in + button",
+  "@create_one_by_clicking_button": {
+    "description": "Create one by clicking in + button",
+    "type": "String"
+  },
+  "write_a_note": "Escreva uma nota...",
+  "@write_a_note": {
+    "description": "Escreva uma nota...",
+    "type": "String"
+  },
+  "create_a_note": "Criar nota",
+  "@create_a_note": {
+    "description": "Criar nota",
+    "type": "String"
+  },
+  "create_new_note": "+ NOVA NOTA",
+  "@create_new_note": {
+    "description": "+ NOVA NOTA",
+    "type": "String"
+  },
+  "create_session": "Criar sessão",
+  "@create_session": {
+    "description": "Criar sessão",
+    "type": "String"
+  },
+  "session_title": "Título",
+  "@session_title": {
+    "description": "Título",
+    "type": "String"
+  },
+  "session_description": "Descrição",
+  "@session_description": {
+    "description": "Descrição",
+    "type": "String"
+  },
+  "select_a_color": "Selecione uma cor",
+  "@select_a_color": {
+    "description": "Selecione uma cor",
+    "type": "String"
+  },
+  "about": "Sobre",
+  "@about": {
+    "description": "Sobre",
+    "type": "String"
+  },
+  "settings": "Configurações",
+  "@settings": {
+    "description": "Configurações",
+    "type": "String"
+  },
+  "logout": "Sair",
+  "@logout": {
+    "description": "Sair",
+    "type": "String"
+  }
+}
